@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale1.0">
+    <meta name="author" content="Rigoberto Nelson Gomes">
+    <title>Turismo na Guiné-Bissau</title>
+    <link rel="stylesheet" href="css/tyle.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif
+        }
+
+        body {
+            background: #f4f4f4;
+            color: #333
+        }
+
+        /* HEADER */
+        header {
+            background: #0b3d2e;
+            color: white;
+            padding: 20px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav a {
+            margin-left: 20px;
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            position: relative;
+        }
+
+        nav a:hover::after {
+            content: attr(data-info);
+            position: absolute;
+            top: 30px;
+            left: 0;
+            background: black;
+            color: white;
+            padding: 8px;
+            font-size: 12px;
+            border-radius: 5px;
+            width: 220px;
+        }
+
+        .btn {
+            background: #ffd700;
+            color: black;
+            padding: 8px 15px;
+            border-radius: 20px;
+            cursor: pointer;
+        }
+
+        /* MAIN */
+        main {
+            padding: 50px
+        }
+
+        h1 {
+            font-size: 40px;
+            color: #0b3d2e;
+            margin-bottom: 10px
+        }
+
+        h2 {
+            color: #0b3d2e;
+            margin-bottom: 15px
+        }
+
+        .slogan {
+            font-size: 20px;
+            margin: 10px 0 25px
+        }
+
+        /* IMAGENS */
+        .big-img {
+            display: flex;
+            width: 100%;
+            max-width: 900px;
+            border-radius: 15px;
+            margin: 20px 0
+        }
+
+        /* GRID */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px
+        }
+
+        /* CARD */
+        .card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, .1);
+            text-align: center;
+        }
+
+        .card img {
+            display: flex;
+            border-radius: 8px;
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+
+        }
+
+        .card p {
+            padding: 15px
+        }
+
+        .card a {
+            display: block;
+            margin: 15px;
+            padding: 10px;
+            background: #0b3d2e;
+            color: white;
+            text-decoration: none;
+            border-radius: 20px;
+        }
+
+        /* MODAL */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, .7);
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal-content {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            width: 300px;
+            text-align: center;
+        }
+
+        .close {
+            margin-top: 15px;
+            color: red;
+            cursor: pointer
+        }
+
+        /* FOOTER */
+        footer {
+            background: #0b3d2e;
+            color: white;
+            text-align: center;
+            padding: 25px;
+            margin-top: 60px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h2>Turismo</h2>
+        <nav>
+            <a data-info="Página inicial do site">Home</a>
+            <a data-info="Informações sobre o projeto">Sobre Nós</a>
+            <a data-info="Serviços turísticos disponíveis">Serviços</a>
+            <span class="btn" onclick="abrirModal()">Fale Connosco</span>
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- INTRODUÇÃO -->
+        <h1>Bem-vindo à Guiné-Bissau</h1>
+        <div class="slogan">
+            <!-- <div class="slogan-im"> -->
+            <h2>Um Paraíso na África</h2>
+            <img src="img/images (1).jpeg" alt="jpeg" width="1400px" height="400px">
+            <!-- <img src="img/images (6).jpeg" alt="jpeg" width="800px" height="400px"> -->
+            <p>A Guiné-Bissau é um país localizada na África Ocidental, conhecida<br>
+                pela sua grande diversidade cultural, beleza natural, ilhas paradisíacas e<br>
+                povo acolhedor. É um destino ideal para viajantes que procuram
+                experiências autênticas.
+            </p>
+
+            <!-- PRINCIPAIS PONTOS TURÍSTICOS -->
+            <div class="section">
+                <h2>Principais Pontos Turísticos</h2>
+                <div class="grid">
+                    <div class="card">
+
+                        <h2>Varela</h2>
+                        <img src="img/Screenshot_20260225-135652 (1).png">
+                        <p>
+                            Praia paradisíaca, calma e ideal para turismo natural.
+                            A cultura e a diversidade e a boa convivencia dos povos daquela zona é encantador.
+                        </p>
+                        <a href="Varla.html" target="_blank">Ver mais</a>
+                    </div>
+
+                    <div class="card">
+
+                        <h2>Bissau</h2>
+                        <img src="img/Screenshot_20260217-131244 (1) (1).png">
+                        <p>
+                            Capital do país, centro cultural e histórico.
+                            Oferece uma coleção de edifícios coloniais muito bonito
+                            a Catedral Da Nssa Senhora De Candelaria é uma delas.
+                        </p>
+                        <a href="Bissau.html" target="_blank">Ver mais</a>
+                    </div>
+
+                    <div class="card">
+                        <h2>Museu de Cacheu</h2>
+                        <img src="img/Screenshot_20260304-030826 (1).png">
+                        <p>
+                            Foi inaugurada em 2016, o memorial dedicada ao trafico negreiro,
+                            e fica situada no forte de Cacheu. O edifício onde hoje é possível ver os
+                            artefatos que marcaram essa época da nossa historia. </p>
+                        <a href="Cacheu.html" target="_blank">Ver mais</a>
+                    </div>
+
+                    <div class="card">
+                        <h2>Parque de Orango</h2>
+                        <img src="img/images (2).jpeg">
+                        <p>O Parque Nacional de Orango faz parte da reserva da bioesfera
+                            e foi criada em 2000 com a finalidade de equilibrar a biodiversidade
+                            da natureza com as comunidades nativas residentes.
+                        </p>
+                        <a href="Parque_Nacional_de_Orango.html" target="_blank">Ver mais</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- POTENCIAL TURÍSTICO -->
+            <div class="section">
+                <h2>Potencial Turístico</h2>
+                <img src="img/images (8).jpeg" alt="jpeg" width="700px" height="400px">
+                <img src="img/images (9).jpeg" alt="jpeg" width="700px" height="400px">
+                <p>
+                    A Guiné-Bissau possui grande potencial de crescimento no turismo sustentável, comunitário e
+                    ecológico, sendo um destino <br>
+                    ainda pouco explorado no mercado internacional.
+                </p>
+                <a href="potencial.html" target="_blank"></a>
+                <div class="grid">
+                    <div class="card">
+                        <h2>O Eco-Turismo</h2>
+                        <img src="img/images.jpeg">
+                        <p>A Guiné-Bissau é um destino privilegiado para o eco-turismo. Possui mangais, florestas,
+                            rios,
+                            fauna marinha, tartarugas, golfinhos e aves migratórias. O Parque Nacional Marinho de
+                            João
+                            Vieira e Poilão é um dos principais exemplos.</p>
+                        <a href="Ecoturismo.html" target="_blank">Saber mais</a>
+                    </div>
+
+                    <div class="card">
+                        <h2>Turismo Cultural</h2>
+                        <img src="img/gschneusig-carnival-7438638_1920.jpg">
+                        <p> O país possui vários grupos étnicos como Balanta, Fula, Mandinga, Papel, Manjaco,
+                            Macanha, Bijagó
+                            e muitos outros que formaram o arco-iris da cultura guineense. As
+                            tradições, danças, máscaras, cerimónias e festas tradicionais fazem parte da experiência
+                            turística.</p>
+                        <a hre="turism_cultural.html" target="_blank">Saber mais</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- DICAS IMPORTANTES -->
+            <div class="section">
+                <h2>Dicas Importantes</h2>
+                <div class="grid">
+                    <div class="card">
+                        <h2>Alojamento</h2>
+                        <img src="img/Screenshot_20260304-042046 (1).png">
+                        <p> O país dispõe de hotéis, pousadas e ecológicos, principalmente em Bissau e nas ilhas dos
+                            Bijagós. O nivel de conforto varia, sendo aconselhável reservar com antecedencia..</p>
+                        <a href="island_Hotel.html" target="_blank">Ver mais</a>
+                    </div>
+
+                    <div class="card">
+                        <h2>Gastronomia</h2>
+                        <img src="img/Screenshot_20260304-030956 (1).png">
+                        <p> A culinária local é baseada em arroz, peixe, mariscos, amendoim e óleo de palma. Pratos
+                            comuns
+                            incluem caldo de mancarra, peixe grelhado e arroz com marisco.</p>
+                        <a href="Gastronomia.html" target="_blank">Ver mais</a>
+                    </div>
+
+                    <div class="card">
+                        <h2>Melhor Época Para Visitar</h2>
+                        <img src="img/Screenshot_20260304-042905 (1).png">
+                        <p>A melhor época para visitar a Guiné-Bissau é entre novembro e maio, durante a estação
+                            seca. O
+                            período chuvoso vai de junho a outubro.</p>
+                        <a href="https://pt.wikipedia.org/wiki/Clima" target="_blank">Ver mais</a>
+                    </div>
+                </div>
+            </div>
+
+    </main>
+
+    <footer>
+        <p>Projeto académico – HTML, CSS e JavaScript</p>
+        <p>Turismo na Guiné-Bissau</p>
+        <p>Novembro De 2026</p>
+        <p>Rigoberto(Nelgui Jr)</p>
+    </footer>
+
+    <!-- MODAL Fale Connosco -->
+    <div class="modal" id="modal">
+        <div class="modal-content">
+            <h3>Fale Connosco</h3>
+            <p>Email: rigobertonelsongomes724@gmail.com </p>
+            <p>WhatsApp: +245 957033887</p>
+            <p>Facebook: rigobertonelsongomes724@gmail.com </p>
+            <div class="close" onclick="fecharModal()">Fechar</div>
+        </div>
+    </div>
+
+    <script>
+        function abrirModal() { document.getElementById("modal").style.display = "flex" }
+        function fecharModal() { document.getElementById("modal").style.display = "none" }
+    </script>
+
+</body>
+
+</html>
